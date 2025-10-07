@@ -138,7 +138,7 @@
         async function listZones() {
             try {
                 const oldZonesUrl = "https://cdn.jsdelivr.net/gh/gn-math/assets@main/zones.json";
-                const newZonesUrl = "https://raw.githubusercontent.com/goaded/bazinga/main/jsonGames";
+                const newZonesUrl = "https://raw.githubusercontent.com/goaded/Bazinga-Main/main/jsonGames";
 
                 const [oldResponse, newResponse] = await Promise.all([
                     fetch(oldZonesUrl).catch(e => console.error("Failed to fetch old zones:", e)),
@@ -395,7 +395,7 @@
         searchBar.addEventListener('input', filterZones);
         sortOptions.addEventListener('change', sortZones);
         async function fetchFileContent(fileName) {
-            const fileUrl = `https://raw.githubusercontent.com/goaded/bazinga/main/${fileName}`;
+            const fileUrl = `https://raw.githubusercontent.com/goaded/Bazinga-Main/main/${fileName}`;
             try {
                 const response = await fetch(fileUrl);
 
