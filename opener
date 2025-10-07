@@ -3,6 +3,22 @@
 <head>
   <title>BAZINGA SITE</title>
   <script>
+async function fetchFileContent(fileName) {
+            const fileUrl = `https://raw.githubusercontent.com/goaded/Bazinga-Main/main/${fileName}`;
+            try {
+                const response = await fetch(fileUrl);
+
+                if (response.ok) {
+                    return await response.text();
+                } else {
+                    throw new Error(`Failed to fetch ${fileName}: HTTP ${response.status}`);
+                }
+            } catch (error) {
+                console.error(error.message);
+                alert(`Error: ${error.message}`);
+                throw error;
+            }
+        }
         // Function to open a new tab using a blank: URL and insert the HTML content from "minecraf.html"
         async function openGameInBlank() {
             try {
