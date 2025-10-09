@@ -1738,15 +1738,6 @@
     "featured": true
   },
   {
-    "id": 217,
-    "name": "Hotline Miami",
-    "cover": "{COVER_URL}/217.png",
-    "url": "{HTML_URL}/217.html",
-    "author": "Dennaton Games",
-    "authorLink": "https://store.steampowered.com/app/219150/Hotline_Miami/",
-    "featured": true
-  },
-  {
     "id": 218,
     "name": "Papa's Bakeria",
     "cover": "{COVER_URL}/218.png",
