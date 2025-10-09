@@ -325,7 +325,6 @@
 
                     const displayName = file.name.endsWith(':') ? file.name.slice(0, -1) : file.name;
                     document.getElementById('zoneName').textContent = displayName;
-                    alert(gameUrl)
                     document.getElementById('zoneId').textContent = file.id;
                     document.getElementById('zoneAuthor').textContent = "by " + (file.author || "Unknown");
                     document.getElementById('zoneAuthor').href = file.authorLink || '#';
