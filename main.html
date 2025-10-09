@@ -153,13 +153,18 @@
                 // FIX: Prioritize Lower IDs by processing old zones first.
                 oldZones.forEach(zone => {
                     const cleanName = zone.name.trim().toLowerCase();
+                    if(!cleanName=="Hotline Miami"){
                     combinedMap.set(cleanName, zone);
+                    }
                 });
 
                 // Then, add new zones, but ONLY if a game with the same name doesn't already exist.
                 // This ensures the lower-ID (old) version is kept in case of a name collision.
                 newZones.forEach(zone => {
                     const cleanName = (zone.name.endsWith(':') ? zone.name.slice(0, -1) : zone.name).trim().toLowerCase();
+                    if(cleanName=="Hotline Miami"){
+                    	combinedMap.set(cleanName,zone);
+                    }
                     if (!combinedMap.has(cleanName)) {
                         combinedMap.set(cleanName, zone);
                     }
@@ -293,7 +298,6 @@
                 window.open(gameUrl, "_blank");
                 return;
             }
-
             fetch(`${gameUrl}?t=${Date.now()}`)
                 .then(response => {
                     if (!response.ok) throw new Error(`Network response: ${response.status}`);
@@ -321,6 +325,7 @@
 
                     const displayName = file.name.endsWith(':') ? file.name.slice(0, -1) : file.name;
                     document.getElementById('zoneName').textContent = displayName;
+                    alert(gameUrl)
                     document.getElementById('zoneId').textContent = file.id;
                     document.getElementById('zoneAuthor').textContent = "by " + (file.author || "Unknown");
                     document.getElementById('zoneAuthor').href = file.authorLink || '#';
