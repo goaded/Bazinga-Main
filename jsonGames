@@ -15750,8 +15750,8 @@
   {
     "id": 1970,
     "name": "Hotline Miami",
-    "cover": "{COVER_URL}/1970.png",
-    "url": "{HTML_URL}/1970.html",
+    "cover": "https://raw.githubusercontent.com/goaded/bazinga/main/1970.png",
+    "url": "https://raw.githubusercontent.com/goaded/bazinga/main/1970.html",
     "author": "Dennaton Games",
     "authorLink": "https://store.steampowered.com/app/219150/Hotline_Miami/",
     "featured": true
