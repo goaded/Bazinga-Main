@@ -151,7 +151,7 @@
                 const combinedMap = new Map();
 
                 // FIX: Prioritize Lower IDs by processing old zones first.	
-                let banned = ["hotline miami","undertale"]
+                let banned = ["hotline miami","undertale","[!] COMMENTS"]
                 oldZones.forEach(zone => {
                     const cleanName = zone.name.trim().toLowerCase();
                     if(!(banned.includes(cleanName))){
